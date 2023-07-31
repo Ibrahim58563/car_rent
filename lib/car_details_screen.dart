@@ -15,16 +15,20 @@ class CarDetailsScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(
+              Padding(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 25.0,
                   vertical: 40,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.arrow_back),
-                    Icon(Icons.settings),
+                    InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(Icons.arrow_back)),
+                    const Icon(Icons.settings),
                   ],
                 ),
               ),
@@ -42,12 +46,12 @@ class CarDetailsScreen extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        const Padding(
-                          padding: EdgeInsets.all(24.0),
+                        Padding(
+                          padding: const EdgeInsets.all(24.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'Fortuner GR',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -59,29 +63,32 @@ class CarDetailsScreen extends StatelessWidget {
                                 children: [
                                   Row(
                                     children: [
-                                      Icon(
-                                        Icons.send_rounded,
+                                      Image.asset(
+                                        'assets/images/arrow.png',
                                         color: Colors.white,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
-                                      Text(
+                                      const Text(
                                         '> 789km',
                                         style: TextStyle(color: Colors.white),
                                       )
                                     ],
                                   ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
                                   Row(
                                     children: [
-                                      Icon(
-                                        Icons.gas_meter_rounded,
+                                      Image.asset(
+                                        'assets/images/gas_pump.png',
                                         color: Colors.white,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
-                                      Text(
+                                      const Text(
                                         '50L',
                                         style: TextStyle(color: Colors.white),
                                       )
@@ -138,8 +145,10 @@ class CarDetailsScreen extends StatelessWidget {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Image.asset(
-                                                      'assets/images/splash_image.png',
+                                                      'assets/images/gas_pump.png',
+                                                      color: Colors.black,
                                                       height: 50,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     const Text(
                                                       'Diesel',
@@ -177,8 +186,10 @@ class CarDetailsScreen extends StatelessWidget {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Image.asset(
-                                                      'assets/images/splash_image.png',
+                                                      'assets/images/acceleration.png',
+                                                      color: Colors.black,
                                                       height: 50,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     const Text(
                                                       'Acceleration',
@@ -216,8 +227,10 @@ class CarDetailsScreen extends StatelessWidget {
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Image.asset(
-                                                      'assets/images/splash_image.png',
+                                                      'assets/images/cool.png',
+                                                      color: Colors.black,
                                                       height: 50,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     const Text(
                                                       'Cool Temp',

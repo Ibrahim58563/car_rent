@@ -6,36 +6,54 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Image.asset(
-            'assets/images/splash_image.png',
-            fit: BoxFit.cover,
-            height: 500,
-          ),
-          const Text(
-            "Premium cars.\nEnjoy the luxury",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: 36,
-            ),
+    return Scaffold(
+      backgroundColor: const Color(0xFF2C2B34),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Stack(
+            children: [
+              Transform.translate(
+                offset: const Offset(-80, 0),
+                child: Image.asset(
+                  'assets/images/splash_image.png',
+                  fit: BoxFit.cover,
+                  height: 630,
+                ),
+              ),
+              const Column(
+                children: [
+                  SizedBox(
+                    height: 520,
+                  ),
+                  Text(
+                    "Premium cars.\nEnjoy the luxury",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 36,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           const SizedBox(
             height: 10,
           ),
-          const Text(
-            "Premium and prestige car daily rental.Experience the thrill at a lower price",
-            style: TextStyle(
-              color: Color(0xFF8E8E8E),
-              fontSize: 16,
+          const Padding(
+            padding: EdgeInsets.only(right: 14.0),
+            child: Text(
+              "Premium and prestige car daily rental. Experience the thrill at a lower price",
+              style: TextStyle(
+                color: Color(0xFF8E8E8E),
+                fontSize: 16,
+              ),
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           InkWell(
             onTap: () {
