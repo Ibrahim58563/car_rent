@@ -1,5 +1,8 @@
-import 'package:car_rent/details_screen.dart';
+import 'package:car_rent/res/strings.dart';
+import 'package:car_rent/view/home/details_screen.dart';
 import 'package:flutter/material.dart';
+
+import '../../res/colors.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -7,7 +10,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2C2B34),
+      backgroundColor: AppColors.mediumBlackColor,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -21,17 +24,17 @@ class SplashScreen extends StatelessWidget {
                   height: 630,
                 ),
               ),
-              const Column(
+              Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 520,
                   ),
                   Text(
-                    "Premium cars.\nEnjoy the luxury",
+                    AppStrings.luxury,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: AppColors.whiteColor,
                       fontSize: 36,
                     ),
                   ),
@@ -42,12 +45,12 @@ class SplashScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Padding(
-            padding: EdgeInsets.only(right: 14.0),
+          Padding(
+            padding: const EdgeInsets.only(right: 14.0),
             child: Text(
-              "Premium and prestige car daily rental. Experience the thrill at a lower price",
+              AppStrings.experience,
               style: TextStyle(
-                color: Color(0xFF8E8E8E),
+                color: AppColors.underDefaultGreyColor,
                 fontSize: 16,
               ),
             ),
@@ -66,14 +69,14 @@ class SplashScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Colors.white,
+                color: AppColors.whiteColor,
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(12.0),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
                 child: Center(
                   child: Text(
-                    "Let's Go",
-                    style: TextStyle(
+                    AppStrings.go,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),

@@ -1,4 +1,4 @@
-import 'package:car_rent/splash_screen.dart';
+import 'package:car_rent/view/on_boarding/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
