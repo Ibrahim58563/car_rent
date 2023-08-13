@@ -20,11 +20,13 @@ class AppStrings {
   static String accelerationInNumbers = '0 - 100km/11s';
   static String cool = 'Cool Temp';
   static String temp = 'Temp Control on seat';
-  static String priceWithOutZeros ='\$ 45,';
-  static String zeros ='00';
-  static String perDay ='/day';
-  static String book ="Book Now";
-  static String hourlyPrice ='\$45,00/h';
-  static String jany ='Jany Copper\n\$4,523';
-  static String more ='More Cars';
+  static String priceWithOutZeros = '\$ 45,';
+  static String zeros = '00';
+  static String perDay = '/day';
+  static String book = "Book Now";
+  static String hourlyPrice = '\$45,00/h';
+  static String jany = 'Jany Copper\n\$4,523';
+  static String more = 'More Cars';
+  static String home = '/home';
+  static String car = '/car';
 }

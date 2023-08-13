@@ -1,8 +1,8 @@
+import 'package:car_rent/res/app_assets.dart';
 import 'package:car_rent/res/colors.dart';
 import 'package:car_rent/res/strings.dart';
+import 'package:car_rent/view/home/widgets/main_app_bar.dart';
 import 'package:flutter/material.dart';
-
-import '../car_details/car_details_screen.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -15,49 +15,18 @@ class DetailsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             child: Column(children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.info_outline_rounded),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text(AppStrings.information)
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      const Stack(alignment: Alignment.topRight, children: [
-                        Icon(Icons.notifications_none_rounded),
-                        CircleAvatar(
-                          backgroundColor: Colors.red,
-                          radius: 5,
-                        )
-                      ]),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text(AppStrings.notification)
-                    ],
-                  ),
-                ],
-              ),
+              const MainAppBar(),
               const SizedBox(
                 height: 20,
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const CarDetailsScreen()));
+                  Navigator.pushNamed(context, AppStrings.car);
                 },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.grey[200],
+                    color: AppColors.lightGreyColor,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -67,14 +36,14 @@ class DetailsScreen extends StatelessWidget {
                           Text(
                             AppStrings.nearest,
                             style: TextStyle(
-                              color: Colors.black.withOpacity(0.3),
+                              color: AppColors.blackColor.withOpacity(0.3),
                             ),
                           ),
-                          Image.asset('assets/images/black_fortuner.png'),
+                          Image.asset(Assets.imagesBlackFortuner),
                           Text(
                             AppStrings.foturner,
-                            style: const TextStyle(
-                              color: Colors.black,
+                            style: TextStyle(
+                              color: AppColors.blackColor,
                               fontWeight: FontWeight.bold,
                               fontSize: 24,
                             ),
@@ -86,7 +55,7 @@ class DetailsScreen extends StatelessWidget {
                                 children: [
                                   Row(
                                     children: [
-                                      Image.asset('assets/images/arrow.png'),
+                                      Image.asset(Assets.imagesArrow),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -103,7 +72,7 @@ class DetailsScreen extends StatelessWidget {
                                   ),
                                   Row(
                                     children: [
-                                      Image.asset('assets/images/gas_pump.png'),
+                                      Image.asset(Assets.imagesGasPump),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -119,8 +88,8 @@ class DetailsScreen extends StatelessWidget {
                               ),
                               Text(
                                 AppStrings.hourlyPrice,
-                                style: const TextStyle(
-                                  color: Colors.black,
+                                style: TextStyle(
+                                  color: AppColors.blackColor,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16,
                                 ),
@@ -141,7 +110,7 @@ class DetailsScreen extends StatelessWidget {
                       height: 190,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.grey[200],
+                        color: AppColors.lightGreyColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
@@ -149,12 +118,12 @@ class DetailsScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               CircleAvatar(
-                                backgroundColor: Colors.grey[300],
+                                backgroundColor: AppColors.mediumGreyColor,
                                 radius: 50,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(50),
                                   child: Image.asset(
-                                    'assets/images/avatar.png',
+                                    Assets.imagesAvatar,
                                   ),
                                 ),
                               ),
@@ -180,7 +149,7 @@ class DetailsScreen extends StatelessWidget {
                       child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
-                      'assets/images/map.png',
+                      Assets.imagesMap,
                       height: 190,
                       fit: BoxFit.cover,
                     ),
@@ -244,7 +213,7 @@ class DetailsScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Image.asset(
-                                                'assets/images/arrow.png',
+                                                Assets.imagesArrow,
                                                 color: AppColors.whiteColor,
                                               ),
                                               const SizedBox(
@@ -264,7 +233,7 @@ class DetailsScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Image.asset(
-                                                'assets/images/gas_pump.png',
+                                                Assets.imagesGasPump,
                                                 color: AppColors.whiteColor,
                                               ),
                                               const SizedBox(
@@ -329,7 +298,7 @@ class DetailsScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Image.asset(
-                                                'assets/images/arrow.png',
+                                                Assets.imagesArrow,
                                                 color: AppColors.whiteColor,
                                               ),
                                               const SizedBox(
@@ -348,8 +317,7 @@ class DetailsScreen extends StatelessWidget {
                                           ),
                                           Row(
                                             children: [
-                                              Image.asset(
-                                                  'assets/images/battery.png'),
+                                              Image.asset(Assets.imagesBattery),
                                               const SizedBox(
                                                 width: 5,
                                               ),

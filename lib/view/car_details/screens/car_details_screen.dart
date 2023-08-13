@@ -1,7 +1,9 @@
+import 'package:car_rent/res/app_assets.dart';
 import 'package:car_rent/res/strings.dart';
+import 'package:car_rent/view/car_details/widgets/secondary_app_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../res/colors.dart';
+import '../../../res/colors.dart';
 
 class CarDetailsScreen extends StatelessWidget {
   const CarDetailsScreen({super.key});
@@ -12,29 +14,13 @@ class CarDetailsScreen extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/map.png',
+            Assets.imagesMap,
             height: MediaQuery.of(context).size.height * 0.8,
             fit: BoxFit.cover,
           ),
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 25.0,
-                  vertical: 40,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Icon(Icons.arrow_back)),
-                    const Icon(Icons.settings),
-                  ],
-                ),
-              ),
+              secondaryAppBar(context),
               const Spacer(),
               Container(
                 decoration: BoxDecoration(
@@ -67,7 +53,7 @@ class CarDetailsScreen extends StatelessWidget {
                                   Row(
                                     children: [
                                       Image.asset(
-                                        'assets/images/arrow.png',
+                                        Assets.imagesArrow,
                                         color: AppColors.whiteColor,
                                       ),
                                       const SizedBox(
@@ -86,7 +72,7 @@ class CarDetailsScreen extends StatelessWidget {
                                   Row(
                                     children: [
                                       Image.asset(
-                                        'assets/images/gas_pump.png',
+                                        Assets.imagesGasPump,
                                         color: AppColors.whiteColor,
                                       ),
                                       const SizedBox(
@@ -120,8 +106,8 @@ class CarDetailsScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     AppStrings.features,
-                                    style: const TextStyle(
-                                      color: Colors.black,
+                                    style: TextStyle(
+                                      color: AppColors.blackColor,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
                                     ),
@@ -148,8 +134,8 @@ class CarDetailsScreen extends StatelessWidget {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Image.asset(
-                                                    'assets/images/gas_pump.png',
-                                                    color: Colors.black,
+                                                    Assets.imagesGasPump,
+                                                    color: AppColors.blackColor,
                                                     height: 50,
                                                     fit: BoxFit.cover,
                                                   ),
@@ -188,8 +174,8 @@ class CarDetailsScreen extends StatelessWidget {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Image.asset(
-                                                    'assets/images/acceleration.png',
-                                                    color: Colors.black,
+                                                    Assets.imagesAcceleration,
+                                                    color: AppColors.blackColor,
                                                     height: 50,
                                                     fit: BoxFit.cover,
                                                   ),
@@ -229,8 +215,8 @@ class CarDetailsScreen extends StatelessWidget {
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Image.asset(
-                                                    'assets/images/cool.png',
-                                                    color: Colors.black,
+                                                    Assets.imagesCool,
+                                                    color: AppColors.blackColor,
                                                     height: 50,
                                                     fit: BoxFit.cover,
                                                   ),
@@ -262,26 +248,28 @@ class CarDetailsScreen extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
                                         children: [
                                           Text(
                                             AppStrings.priceWithOutZeros,
-                                            style: const TextStyle(
-                                              color: Colors.black,
+                                            style: TextStyle(
+                                              color: AppColors.blackColor,
                                               fontWeight: FontWeight.bold,
                                               fontSize: 34,
                                             ),
                                           ),
                                           Text(
                                             AppStrings.zeros,
-                                            style: const TextStyle(
-                                              color: Colors.black,
+                                            style: TextStyle(
+                                              color: AppColors.blackColor,
                                               fontSize: 34,
                                             ),
                                           ),
                                           Text(
                                             AppStrings.perDay,
-                                            style: const TextStyle(
-                                              color: Colors.black,
+                                            style: TextStyle(
+                                              color: AppColors.blackColor,
                                               fontSize: 16,
                                             ),
                                           ),
@@ -294,7 +282,7 @@ class CarDetailsScreen extends StatelessWidget {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(25),
-                                          color: Colors.black,
+                                          color: AppColors.blackColor,
                                         ),
                                         child: Padding(
                                           padding: const EdgeInsets.all(12.0),
@@ -332,7 +320,7 @@ class CarDetailsScreen extends StatelessWidget {
                             ),
                           ),
                           Image.asset(
-                            'assets/images/white_fortuner.png',
+                            Assets.imagesWhiteFortuner,
                             height: 110,
                           ),
                         ],

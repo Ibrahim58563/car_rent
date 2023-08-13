@@ -1,5 +1,5 @@
+import 'package:car_rent/res/app_assets.dart';
 import 'package:car_rent/res/strings.dart';
-import 'package:car_rent/view/home/details_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../res/colors.dart';
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
               Transform.translate(
                 offset: const Offset(-80, 0),
                 child: Image.asset(
-                  'assets/images/splash_image.png',
+                  Assets.imagesSplashImage,
                   fit: BoxFit.cover,
                   height: 630,
                 ),
@@ -60,10 +60,7 @@ class SplashScreen extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const DetailsScreen()));
+              Navigator.pushNamed(context, AppStrings.home);
             },
             child: Container(
               width: MediaQuery.of(context).size.width,
